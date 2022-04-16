@@ -10,6 +10,8 @@ package etc;
 5. 내부 static 클래스에 접근시에는 내부 클래스만 로딩되고 외부 클래스는 로딩 안됨.
  */
 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         //new Single(); // new Class() : Single Class Load O
@@ -17,6 +19,7 @@ public class Main {
         //System.out.println(Single.b); // static final variable : Single Class Load X
         //Single.getInstance(); // static method : Single Class Load O
         System.out.println(Single.Inner.INSATACE); // static inner Class : Single Class Load X, Inner Class Load O
+        Date d = new Date();
     }
 }
 
